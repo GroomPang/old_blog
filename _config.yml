@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: Serverless Vulnerability Analysis
+subtitle: Team.GoormPang
+description: Serverless Vulnerability Analysis Blog of Kitri BoB 10th project team GroomPang
+author: GoormPang
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
