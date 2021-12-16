@@ -2,7 +2,7 @@
 layout: post
 title: "Frist Post"
 date: 2021-12-16
-categories: etc
+categories: etc, hello
 tags: [hello, groompang, serverless, bob]
 ---
 
