@@ -105,7 +105,7 @@ kube-proxy는 서비스의 IP 및 포트로 들어온 접속을 서비스의 엔
 
 ---
 
-### References
+# References
 [Accordion Blog, "클라우드의 시대, 컨테이너 오케스트레이션 툴이 반드시 필요한 이유"](https://accordions.co.kr/it_trend/14778/)
 
 [godpearl, "쿠버네티스 아키텍쳐(2/2) (마스터노드/워커노드)"](https://pearlluck.tistory.com/136)
