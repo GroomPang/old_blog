@@ -35,10 +35,6 @@ tags: [kubernetes, structure]
 
 쿠버네티스에는 마스터 노드와 워커 노드가 존재하고, 이러한 노드들의 집합을 클러스터라고 한다. 마스터 노드는 쿠버네티스 클러스터 전체를 컨트롤하는 시스템이고, 워커 노드는 실제 워크로드(workload)에 해당하는 서비스들을 구동하는 머신(machine)이다.
 
-
-
-
-
 ---
 
 # **마스터 노드(Kubernetes Master)**
@@ -78,7 +74,7 @@ API 서버를 통해, 클러스터 리소스의 변경을 감시하고 변경하
 
 ## DNS
 
-리소스 엔드포인트를 DNS로 매핑하고 관리한다. **파드나 서비스**들은 ip를 배정받지만, **동적으로** **생성**되는 리소스이기 때문에 ip가 변경되면 dns에 위치정보를 저장한다. 새로운 리소스가 생기면 그 리소스에 대한 ip와 dns이름을 등록하고, dns 이름 기반으로 리소스를 접근한다.
+리소스 엔드포인트를 DNS로 매핑하고 관리한다. 파드나 서비스들은 ip를 배정받지만, 동적으로 생성되는 리소스이기 때문에 ip가 변경되면 dns에 위치정보를 저장한다. 새로운 리소스가 생기면 그 리소스에 대한 ip와 dns이름을 등록하고, dns 이름 기반으로 리소스를 접근한다.
 
 ---
 
@@ -90,12 +86,10 @@ API 서버를 통해, 클러스터 리소스의 변경을 감시하고 변경하
 
 ## kubelet
 
-마스터 노드의 API 서버와 통신하는 컴포넌트이다.
+마스터 노드의 API 서버와 통신하는 컴포넌트이다. 노드에 할당된 파드들의 생명주기를 관리한다. 다시 말해, 파드를 생성하고, 파드안의 컨테이너에 이상이 없는지 확인하면서 노드의 상태를 마스터 노드에게 전달한다. 또한, API 서버의 요청을 받아서 컨테이너의 로그를 전달하거나, 특정 명령을 대신 수행하기도 한다.
 
-1. 마스터 노드의 API 서버로부터 수행할 명령을 받아서 워커 노드를 수행
+1. 마스터 노드의 API 서버로부터 전달된 명령을 수행
 2. 워커 노드의 상태를 마스터 노드로 전달
-
-노드에 할당된 파드들의 생명주기를 관리한다. 파드를 생성하고, 파드안의 컨테이너에 이상이 없는지 확인하면서 노드의 상태를 마스터 노드에게 전달한다. API 서버의 요청을 받아서 컨테이너의 로그를 전달하거나, 특정 명령을 대신 수행하기도 한다.
 
 ## kube-proxy
 
@@ -106,14 +100,9 @@ kube-proxy는 서비스의 IP 및 포트로 들어온 접속을 서비스의 엔
 ---
 
 # References
-[Accordion Blog, "클라우드의 시대, 컨테이너 오케스트레이션 툴이 반드시 필요한 이유"](https://accordions.co.kr/it_trend/14778/)
-
-[godpearl, "쿠버네티스 아키텍쳐(2/2) (마스터노드/워커노드)"](https://pearlluck.tistory.com/136)
-
-[Seongpyo Hong, "[Kubernetes 내부 구조 이해하기] 1. 쿠버네티스 클러스터 구성 요소"](https://sphong0417.tistory.com/53)
-
-[kubernetes, "쿠버네티스란 무엇인가?"](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/)
-
-[kubernetes, "쿠버네티스 컴포넌트"](https://kubernetes.io/ko/docs/concepts/overview/components/)
-
-[커피고래의 노트, "[번역] 쿠버네티스 네트워킹 이해하기#2: Services"](https://coffeewhale.com/k8s/network/2019/05/11/k8s-network-02/)
+Accordion Blog, "클라우드의 시대, 컨테이너 오케스트레이션 툴이 반드시 필요한 이유", [link](https://accordions.co.kr/it_trend/14778/)  
+godpearl, "쿠버네티스 아키텍쳐(2/2) (마스터노드/워커노드)", [link](https://pearlluck.tistory.com/136)  
+Seongpyo Hong, "[Kubernetes 내부 구조 이해하기] 1. 쿠버네티스 클러스터 구성 요소", [link](https://sphong0417.tistory.com/53)  
+kubernetes, "쿠버네티스란 무엇인가?", [link](https://kubernetes.io/ko/docs/concepts/overview/what-is-kubernetes/)  
+kubernetes, "쿠버네티스 컴포넌트", [link](https://kubernetes.io/ko/docs/concepts/overview/components/)  
+커피고래의 노트, "[번역] 쿠버네티스 네트워킹 이해하기#2: Services", [link](https://coffeewhale.com/k8s/network/2019/05/11/k8s-network-02/)
