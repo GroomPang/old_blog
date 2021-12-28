@@ -31,7 +31,7 @@ tags: [kubernetes, structure]
 
 ## 간략한 구조
 
-![Caption](https://github.com/GroomPang/Research/blob/main/%EA%B7%B8%EB%A6%BC2.png?raw=true)
+![Caption](https://github.com/GroomPang/Research/blob/main/pictures/%EA%B7%B8%EB%A6%BC2.png?raw=true)
 
 쿠버네티스에는 마스터 노드와 워커 노드가 존재하고, 이러한 노드들의 집합을 클러스터라고 한다. 마스터 노드는 쿠버네티스 클러스터 전체를 컨트롤하는 시스템이고, 워커 노드는 실제 워크로드(workload)에 해당하는 서비스들을 구동하는 머신(machine)이다.
 
@@ -43,7 +43,7 @@ tags: [kubernetes, structure]
 
 # **마스터 노드(Kubernetes Master)**
 
-![Caption](https://github.com/GroomPang/Research/blob/main/%EA%B7%B8%EB%A6%BC1.png?raw=true)
+![Caption](https://github.com/GroomPang/Research/blob/main/pictures/%EA%B7%B8%EB%A6%BC1.png?raw=true)
 
 마스터 노드는 여러 컴포넌트(component)를 내부에 두어, 쿠버네티스 클러스터를 관리하고, 모든 컴포넌트는 API 서버를 통해서 통신한다. 이는 관리자만 접속할 수 있고, 보안 설정이 필요하다.
 
